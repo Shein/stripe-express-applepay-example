@@ -68,13 +68,18 @@ const ExpressCheckoutButtons = () => {
             // we MUST provide some DUMMY data when onClick is fired, otherwise we get an exception:
             // IntegrationError: When `shippingAddressRequired` is true, you must specify `shippingRates`.
             // but if we set shippingAddressRequired to `false` there is no option to set a shippign address
-            shippingRates = [
-                {
-                    id: 'standard',
-                    amount: 0,
-                    displayName: 'Calculating shipping...'
-                }
-            ];
+
+            // DEAR STRIPE:
+            //
+            // Uncomment the code below to enable the workaround and remove the error
+
+            // shippingRates = [
+            //     {
+            //         id: 'standard',
+            //         amount: 0,
+            //         displayName: 'Calculating shipping...'
+            //     }
+            // ];
         }
 
         // Construct the line items
